@@ -3,7 +3,6 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:sanyu_music_master/model/recommendSongs.dart';
 import 'package:sanyu_music_master/pages/play_list/play_list_page.dart';
 import 'package:sanyu_music_master/widgets/common_text_style.dart';
 import 'package:sanyu_music_master/widgets/components/iconTextWidget.dart';
@@ -29,7 +28,7 @@ class _PlaySongPage extends State<PlaySongPage> with TickerProviderStateMixin{
       duration: Duration(seconds: 20), vsync: this,
     );
     _needleController = AnimationController(
-      duration: Duration(milliseconds: 400),vsync: this
+        duration: Duration(milliseconds: 400),vsync: this
     );
     _needleAnimation = Tween<double>(begin: -0.01, end: -0.07).animate(_needleController);
 
@@ -96,76 +95,86 @@ class _PlaySongPage extends State<PlaySongPage> with TickerProviderStateMixin{
             ),
           ),
           Container(
-            child: Stack(
+            child: Column(
               children: <Widget>[
-                Align(
-                  alignment: Alignment.topCenter,
-                  child: Container(
-                    padding: EdgeInsets.only(top: 220),
-                    child:RotationTransition(
-                      turns: _recordController,
-                      child: Stack(
-                        alignment: Alignment.center,
-                        children: <Widget>[
-                          Image.asset(
-                            "images/play_song_record.png",
-                            width: 340,
-                          ),
-                          Container(
-                            width:224,
-                            height: 224,
-                            decoration: BoxDecoration(
-                              image: DecorationImage(
-                                image: AssetImage("images/my_photo.png"),
-                                fit: BoxFit.cover,
-                              ),
-                              borderRadius: BorderRadius.all(Radius.circular(200)),
-                            ),
-                          )
-                        ],
-                      )
-                    ) ,
-                  ),
-                ),
-                Align(
-                  alignment: Alignment.topCenter,
-                  child:Container(
-                    padding: EdgeInsets.fromLTRB(100, 78, 0, 0),
-                    child: RotationTransition(
-                      alignment:  Alignment(
-                          -1 + (45 /146),
-                          -1 + (45/252)),
-                      turns: _needleAnimation,
-                      child: Image.asset(
-                        "images/play_song_needle.png",
-                        width:146,
-                        height: 252,
+                Expanded(
+                  child:  Stack(
+                    children: <Widget>[
+                      Align(
+                        alignment: Alignment.topCenter,
+                        child: Container(
+                          padding: EdgeInsets.only(top: 220),
+                          child:RotationTransition(
+                              turns: _recordController,
+                              child: Stack(
+                                alignment: Alignment.center,
+                                children: <Widget>[
+                                  Image.asset(
+                                    "images/play_song_record.png",
+                                    width: 340,
+                                  ),
+                                  Container(
+                                    width:224,
+                                    height: 224,
+                                    decoration: BoxDecoration(
+                                      image: DecorationImage(
+                                        image: AssetImage("images/my_photo.png"),
+                                        fit: BoxFit.cover,
+                                      ),
+                                      borderRadius: BorderRadius.all(Radius.circular(200)),
+                                    ),
+                                  )
+                                ],
+                              )
+                          ) ,
+                        ),
                       ),
-                    ),
+                      Align(
+                        alignment: Alignment.topCenter,
+                        child:Container(
+                          padding: EdgeInsets.fromLTRB(100, 78, 0, 0),
+                          child: RotationTransition(
+                            alignment:  Alignment(
+                                -1 + (45 /146),
+                                -1 + (45/252)),
+                            turns: _needleAnimation,
+                            child: Image.asset(
+                              "images/play_song_needle.png",
+                              width:146,
+                              height: 252,
+                            ),
+                          ),
+                        ),
+                      )
+                    ],
                   ),
-                )
+                ),
+                Container(
+                  height: 100,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: <Widget>[
+                      IconTextWidget(
+                          "images/icon_music_dislike.png",60
+                      ),
+                      IconTextWidget(
+                          "images/icon_music_download.png",60
+                      ),
+                      IconTextWidget(
+                          "images/icon_music_sing.png",60
+                      ),
+                      IconTextWidget(
+                          "images/icon_music_comment.png",60
+                      ),
+                      IconTextWidget(
+                          "images/icon_music_more.png",60
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(height: 120,)
               ],
-            ),
-          ),
-          Container(
-            child: Row(
-              children: <Widget>[
-                IconTextWidget(
-                  "images/icon_music_dislike.png",100
-                ),
-                IconTextWidget(
-                    "images/icon_music_download.png",100
-                ),
-                IconTextWidget(
-                    "images/icon_music_sing.png",100
-                ),
-                IconTextWidget(
-                    "images/icon_music_comment.png",100
-                ),
-                IconTextWidget(
-                    "images/icon_music_more.png",100
-                ),
-              ],
+
             ),
           ),
           Align(
@@ -186,7 +195,7 @@ class _PlaySongPage extends State<PlaySongPage> with TickerProviderStateMixin{
       ),
     );
   }
-@override
+  @override
   void dispose() {
     _recordController.dispose();
     _needleController.dispose();
