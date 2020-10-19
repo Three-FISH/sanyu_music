@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/sanyu_music_master.iml" filepath="$PROJECT_DIR$/.idea/sanyu_music_master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/sanyu_music.iml" filepath="$PROJECT_DIR$/.idea/sanyu_music.iml" />
     </modules>
   </component>
 </project>

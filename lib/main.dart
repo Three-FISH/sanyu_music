@@ -3,7 +3,6 @@ import 'package:oktoast/oktoast.dart';
 import 'package:provider/provider.dart';
 import 'package:sanyu_music_master/pages/home/home_page.dart';
 import 'package:sanyu_music_master/pages/login.dart';
-import 'package:sanyu_music_master/pages/play_list/play_list_page.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'provider/user_model.dart';

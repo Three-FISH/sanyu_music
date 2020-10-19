@@ -3,6 +3,6 @@
 3    package="com.baseflow.permissionhandler" >
 4
 5    <uses-sdk android:minSdkVersion="16" />
-5-->/Users/wangyf/.pub-cache/hosted/pub.flutter-io.cn/permission_handler-5.0.1+1/android/src/main/AndroidManifest.xml
+5-->C:\Users\Administrator\AppData\Local\Pub\Cache\hosted\pub.flutter-io.cn\permission_handler-5.0.1+1\android\src\main\AndroidManifest.xml
 6
 7</manifest>

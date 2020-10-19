@@ -2,10 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:oktoast/oktoast.dart';
 import 'package:sanyu_music_master/model/musicPlay.dart';
+import 'package:sanyu_music_master/pages/play_list/music_play_widget.dart';
+import 'package:sanyu_music_master/pages/play_list/play_list_page_top.dart';
 import 'package:sanyu_music_master/widgets/components/musicPlayItem.dart';
-import 'package:sanyu_music_master/widgets/components/playListPageTop.dart';
-import 'package:sanyu_music_master/widgets/components/playListSongWidget.dart';
-
 class PlayListPage extends StatefulWidget{
   @override
   State<StatefulWidget> createState() {
@@ -75,21 +74,20 @@ class _PlayListPage extends State<PlayListPage>{
       backgroundColor:Colors.white,
       body: Stack(
         children: <Widget>[
-          Padding(
-            padding:EdgeInsets.only(bottom: 0),
+          Container(
             child: CustomScrollView(
               slivers: <Widget>[
                 PlayListPageTop(
-                  expandedHeight: 320,
+                  expandedHeight: 340,
                   bgUrl: "images/list_cover.png",
-                  title: "[聚精会神]工作学习专属音乐",
+                  title: "官方动态歌单",
                   count: 15,
                 ),
                 SliverList(
                     delegate: SliverChildBuilderDelegate((context, index) {
                       return MusicPlayItem(
                         onTap: (){
-                            showToast("点击了音乐条目播放");
+                          showToast("点击了音乐条目播放");
                         },
                         musicData: MusicData(
                           mvid: musicList[index][0],
@@ -106,7 +104,8 @@ class _PlayListPage extends State<PlayListPage>{
               ],
             ),
 
-          )
+          ),
+          MusicPlayWidget(),
         ],
       ),
     );

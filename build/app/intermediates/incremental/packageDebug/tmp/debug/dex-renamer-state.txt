@@ -1,4 +1,4 @@
-#Tue Oct 13 19:36:38 CST 2020
-base.0=/Users/wangyf/Downloads/sanyu_music_master/build/app/intermediates/dex/debug/mergeDexDebug/out/classes.dex
+#Mon Oct 19 15:42:05 CST 2020
+base.0=E\:\\FlutterProgram\\new_sanyu_music\\sanyu_music\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
