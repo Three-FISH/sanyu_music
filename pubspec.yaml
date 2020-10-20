@@ -42,8 +42,8 @@ dependencies:
   dio_http_cache: ^0.2.9
   json_annotation: ^3.0.1
   flutter_spinkit: ^4.1.2+1
-  event_bus: ^1.1.1
-  get_it: ^5.0.1
+  audioplayer: ^0.8.1
+
 
 
 

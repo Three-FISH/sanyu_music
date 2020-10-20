@@ -1,8 +1,10 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:oktoast/oktoast.dart';
 import 'package:provider/provider.dart';
-import 'package:sanyu_music_master/pages/home/home_page.dart';
-import 'package:sanyu_music_master/pages/login.dart';
+import 'package:sanyu_music_master/pages/play_list/play_list_page.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'provider/user_model.dart';
@@ -17,6 +19,11 @@ void main() {
       ],
      child:MyApp()
   ));
+  if (Platform.isAndroid) {
+    SystemUiOverlayStyle systemUiOverlayStyle =
+    SystemUiOverlayStyle(statusBarColor: Colors.transparent);
+    SystemChrome.setSystemUIOverlayStyle(systemUiOverlayStyle);
+  }
 }
 
 
@@ -58,7 +65,7 @@ class _MyAppState extends State<MyApp> {
           child: Center(
             child: CircularProgressIndicator(),
           ),
-        ):hasToken?LoginPage():HomePage(),
+        ):hasToken? PlayListPage():PlayListPage(),
       ),
     );
   }

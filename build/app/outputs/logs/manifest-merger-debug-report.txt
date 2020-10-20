@@ -5,6 +5,7 @@ INJECTED from E:\FlutterProgram\new_sanyu_music\sanyu_music\android\app\src\main
 INJECTED from E:\FlutterProgram\new_sanyu_music\sanyu_music\android\app\src\main\AndroidManifest.xml:1:1-47:12
 INJECTED from E:\FlutterProgram\new_sanyu_music\sanyu_music\android\app\src\main\AndroidManifest.xml:1:1-47:12
 MERGED from E:\FlutterProgram\new_sanyu_music\sanyu_music\android\app\src\main\AndroidManifest.xml:1:1-47:12
+MERGED from [:audioplayer] E:\FlutterProgram\new_sanyu_music\sanyu_music\build\audioplayer\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:shared_preferences] E:\FlutterProgram\new_sanyu_music\sanyu_music\build\shared_preferences\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:permission_handler] E:\FlutterProgram\new_sanyu_music\sanyu_music\build\permission_handler\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:sqflite] E:\FlutterProgram\new_sanyu_music\sanyu_music\build\sqflite\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
@@ -99,6 +100,8 @@ uses-sdk
 INJECTED from E:\FlutterProgram\new_sanyu_music\sanyu_music\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from E:\FlutterProgram\new_sanyu_music\sanyu_music\android\app\src\main\AndroidManifest.xml
 INJECTED from E:\FlutterProgram\new_sanyu_music\sanyu_music\android\app\src\main\AndroidManifest.xml
+MERGED from [:audioplayer] E:\FlutterProgram\new_sanyu_music\sanyu_music\build\audioplayer\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:audioplayer] E:\FlutterProgram\new_sanyu_music\sanyu_music\build\audioplayer\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:shared_preferences] E:\FlutterProgram\new_sanyu_music\sanyu_music\build\shared_preferences\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:shared_preferences] E:\FlutterProgram\new_sanyu_music\sanyu_music\build\shared_preferences\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:permission_handler] E:\FlutterProgram\new_sanyu_music\sanyu_music\build\permission_handler\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44

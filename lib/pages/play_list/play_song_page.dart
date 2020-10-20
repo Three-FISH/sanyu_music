@@ -3,7 +3,9 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:oktoast/oktoast.dart';
 import 'package:sanyu_music_master/pages/play_list/play_list_page.dart';
+import 'package:sanyu_music_master/pages/play_list/play_song_progress.dart';
 import 'package:sanyu_music_master/widgets/common_text_style.dart';
 import 'package:sanyu_music_master/widgets/components/iconTextWidget.dart';
 
@@ -103,7 +105,7 @@ class _PlaySongPage extends State<PlaySongPage> with TickerProviderStateMixin{
                       Align(
                         alignment: Alignment.topCenter,
                         child: Container(
-                          padding: EdgeInsets.only(top: 220),
+                          padding: EdgeInsets.only(top: 210),
                           child:RotationTransition(
                               turns: _recordController,
                               child: Stack(
@@ -155,42 +157,47 @@ class _PlaySongPage extends State<PlaySongPage> with TickerProviderStateMixin{
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: <Widget>[
                       IconTextWidget(
-                          "images/icon_music_dislike.png",60
+                          "images/icon_music_dislike.png",50,
+                        onTap: (){
+                            showToast("收藏");
+                        },
                       ),
                       IconTextWidget(
-                          "images/icon_music_download.png",60
+                          "images/icon_music_down.png",50
                       ),
                       IconTextWidget(
-                          "images/icon_music_sing.png",60
+                          "images/icon_music_sing.png",50
                       ),
                       IconTextWidget(
-                          "images/icon_music_comment.png",60
+                          "images/icon_music_comment.png",50
                       ),
                       IconTextWidget(
-                          "images/icon_music_more.png",60
+                          "images/icon_music_more.png",50
                       ),
                     ],
                   ),
                 ),
-                SizedBox(height: 120,)
+                SizedBox(height: 20,),
+                PlaySongProgress(),
+                SizedBox(height: 30,),
+                Container(
+                  padding: EdgeInsets.only(bottom: 40),
+                  child: InkWell(
+                    child: Image.asset(flag ==true ? "images/pause.png":"images/play.png",width: 60,color: Colors.white,),
+                    onTap: (){
+                      if(flag == true){
+                        flag = false;
+                      }else{
+                        flag = true;
+                      }
+                      setState(() {});
+                    },
+                  ),
+                ),
+                SizedBox(height: 10,)
               ],
-
             ),
           ),
-          Align(
-            alignment: Alignment.bottomCenter,
-            child: IconButton(
-              icon: Icon(Icons.play_circle_outline,size: 60,color: Colors.white,),
-              onPressed: (){
-                if(flag == true){
-                  flag = false;
-                }else{
-                  flag = true;
-                }
-                setState(() {});
-              },
-            ),
-          )
         ],
       ),
     );

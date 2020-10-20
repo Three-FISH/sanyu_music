@@ -31,9 +31,15 @@ class MusicAllPlayBar extends StatelessWidget implements PreferredSizeWidget{
                   size: 40,
                 ),
               ),
-              Text("播放全部",style: commonBlackTextStyle,),
+              Padding(
+                padding: EdgeInsets.only(top: 20),
+                child: Text("播放全部",style: commonBlackTextStyle,),
+              ),
               SizedBox(width: 4,),
-              Text("(共$count首)",style: smallCommonTextStyle,)
+              Padding(
+                padding: EdgeInsets.only(top: 20),
+                child: Text("(共$count首)",style: smallCommonTextStyle,),
+              ),
             ],
           ),
         ),
@@ -44,6 +50,6 @@ class MusicAllPlayBar extends StatelessWidget implements PreferredSizeWidget{
 
   @override
   // TODO: implement preferredSize
-  Size get preferredSize => Size.fromHeight(100);
+  Size get preferredSize => Size.fromHeight(60);
 
 }

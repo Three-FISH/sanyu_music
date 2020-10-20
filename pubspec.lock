@@ -29,6 +29,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "2.5.0-nullsafety.1"
+  audioplayer:
+    dependency: "direct main"
+    description:
+      name: audioplayer
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.8.1"
   boolean_selector:
     dependency: transitive
     description:
@@ -218,13 +225,6 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "0.2.9"
-  event_bus:
-    dependency: "direct main"
-    description:
-      name: event_bus
-      url: "https://pub.flutter-io.cn"
-    source: hosted
-    version: "1.1.1"
   extended_image:
     dependency: "direct main"
     description:
@@ -289,13 +289,6 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  get_it:
-    dependency: "direct main"
-    description:
-      name: get_it
-      url: "https://pub.flutter-io.cn"
-    source: hosted
-    version: "5.0.1"
   glob:
     dependency: transitive
     description:

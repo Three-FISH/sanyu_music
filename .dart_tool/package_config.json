@@ -26,6 +26,12 @@
       "languageVersion": "2.10"
     },
     {
+      "name": "audioplayer",
+      "rootUri": "file:///C:/Users/Administrator/AppData/Local/Pub/Cache/hosted/pub.flutter-io.cn/audioplayer-0.8.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.0"
+    },
+    {
       "name": "boolean_selector",
       "rootUri": "file:///C:/Users/Administrator/AppData/Local/Pub/Cache/hosted/pub.flutter-io.cn/boolean_selector-2.1.0-nullsafety.1",
       "packageUri": "lib/",
@@ -188,12 +194,6 @@
       "languageVersion": "2.1"
     },
     {
-      "name": "event_bus",
-      "rootUri": "file:///C:/Users/Administrator/AppData/Local/Pub/Cache/hosted/pub.flutter-io.cn/event_bus-1.1.1",
-      "packageUri": "lib/",
-      "languageVersion": "2.0"
-    },
-    {
       "name": "extended_image",
       "rootUri": "file:///C:/Users/Administrator/AppData/Local/Pub/Cache/hosted/pub.flutter-io.cn/extended_image-1.1.1",
       "packageUri": "lib/",
@@ -252,12 +252,6 @@
       "rootUri": "file:///D:/flutter/flutter/packages/flutter_web_plugins",
       "packageUri": "lib/",
       "languageVersion": "2.0"
-    },
-    {
-      "name": "get_it",
-      "rootUri": "file:///C:/Users/Administrator/AppData/Local/Pub/Cache/hosted/pub.flutter-io.cn/get_it-5.0.1",
-      "packageUri": "lib/",
-      "languageVersion": "2.1"
     },
     {
       "name": "glob",
@@ -650,7 +644,7 @@
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2020-10-19T07:39:45.981470Z",
+  "generated": "2020-10-20T02:47:31.717748Z",
   "generator": "pub",
   "generatorVersion": "2.11.0-213.1.beta"
 }
